@@ -1,0 +1,334 @@
+/* styles.css */
+
+/* Definir variáveis para o tema claro */
+:root {
+    --bg-color: #f7f7f7; /* Cor de fundo suavizada */
+    --text-color: #455A64; /* Cor de texto escura para melhor contraste */
+    --header-bg: #455A64; /* Cor de fundo do cabeçalho igual à cor de texto */
+    --header-text: #333333; /* Cor de texto escura do cabeçalho para melhor contraste */
+    --btn-color: #2196F3; /* Cor azul do botão */
+    --btn-hover: #42A5F5; /* Cor azul clara do botão ao passar o mouse */
+    --progress-bg: #E5E5E5; /* Cor de fundo do progresso em cinza claro */
+    --progress-bar-color: #009688; /* Cor verde-azul da barra de progresso */
+    --social-link-border: #ccc; /* Nova variável para a cor da borda dos links de rede social */
+}
+
+/* Tema escuro */
+body.dark-theme {
+    --bg-color: #212121; /* Cor de fundo escura */
+    --text-color: #B1B1B1; /* Cor de texto clara para melhor contraste */
+    --header-bg: #212121; /* Cor de fundo do cabeçalho igual à cor de fundo */
+    --header-text: #999999; /* Cor de texto clara do cabeçalho para melhor contraste */
+    --btn-color: #FFC107; /* Cor laranja do botão */
+    --btn-hover: #FFA07A; /* Cor laranja clara do botão ao passar o mouse */
+    --progress-bg: #333333; /* Cor de fundo do progresso em cinza escuro */
+    --progress-bar-color: #FFC107; /* Cor laranja da barra de progresso */
+    --social-link-border: #fff; /* Cor da borda dos links de rede social no tema escuro */
+}
+
+
+/* Aplicar as variáveis */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--header-text) !important;
+}
+
+.nav-link:hover {
+    color: var(--btn-hover) !important;
+}
+
+.btn-dark {
+    background-color: var(--btn-color);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-dark:hover {
+    background-color: var(--btn-hover);
+}
+
+.progress {
+    background-color: var(--progress-bg);
+}
+
+.progress-bar {
+    background-color: var(--progress-bar-color);
+    transition: width 2s ease-in-out, background-color 0.3s;
+}
+
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a.btn-outline-primary,
+.social-links a.btn-outline-dark {
+    border-color: var(--btn-color);
+    color: var(--btn-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a.btn-outline-primary:hover,
+.social-links a.btn-outline-dark:hover {
+    background-color: var(--btn-hover);
+    color: #fff;
+}
+
+/* Seção Início */
+.section-inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.section-inicio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section-inicio .container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.section-inicio p {
+    font-size: 1.5rem;
+}
+
+/* Seções Gerais */
+section {
+    padding: 80px 0;
+}
+
+/* Sobre Mim */
+.section-sobre {
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-sobre p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 10px;
+}
+
+/* Habilidades */
+.section-habilidades {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-habilidades h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    width: 300px;
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.progress {
+    background-color: var(--progress-bg);
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--progress-bar-color);
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    color: #fff;
+    border-radius: 25px 0 0 25px;
+    transition: width 2s ease-in-out;
+}
+
+/* Projetos */
+.section-projetos {
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-projetos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-projetos p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contato */
+.section-contato {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.section-contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Links de Redes Sociais */
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links h5 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: var(--btn-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--btn-hover);
+    color: #fff;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px 0;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Responsividade Adicional */
+@media (max-width: 768px) {
+    .section-inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-inicio p {
+        font-size: 1.2rem;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .social-links ul {
+        flex-direction: column;
+    }
+
+    .social-links ul li {
+        margin: 0.5em 0;
+    }
+}
