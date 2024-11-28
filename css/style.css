@@ -28,9 +28,11 @@ body.dark-theme {
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Cabeçalho */
 header {
     background-color: var(--header-bg);
     color: var(--header-text);
@@ -40,6 +42,7 @@ header {
 .navbar-brand,
 .nav-link {
     color: var(--header-text) !important;
+    font-weight: 600;
 }
 
 .nav-link:hover {
@@ -50,6 +53,8 @@ header {
     color: var(--theme-toggle-color);
     background-color: transparent;
     border: 1px solid var(--theme-toggle-color);
+    padding: 8px 16px;
+    border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -58,30 +63,36 @@ header {
     color: #fff;
 }
 
+/* Botões */
 .btn-dark {
     background-color: var(--btn-color);
     border: none;
     transition: background-color 0.3s;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
 }
 
 .btn-dark:hover {
     background-color: var(--btn-hover);
 }
 
+/* Barra de Progresso */
 .progress {
     background-color: var(--progress-bg);
     border-radius: 25px;
     overflow: hidden;
     height: 20px;
+    margin-bottom: 30px;
 }
 
 .progress-bar {
     background-color: var(--progress-bar-color);
+    line-height: 20px;
     padding-right: 10px;
-    text-align: right;
     color: #fff;
     border-radius: 25px 0 0 25px;
-    transition: width 2s ease-in-out, background-color 0.3s;
+    transition: width 2s ease-in-out;
 }
 
 /* Rodapé */
@@ -125,15 +136,18 @@ footer {
 .section-inicio h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .section-inicio p {
     font-size: 1.5rem;
+    font-weight: 300;
 }
 
 /* Seções Gerais */
 section {
     padding: 80px 0;
+    margin: 0 auto;
 }
 
 #sobre {
@@ -147,11 +161,13 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 30px;
+    font-size: 2.5rem;
 }
 
 #sobre p {
     color: #333;
     font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 #sobre img {
@@ -189,21 +205,6 @@ section {
     color: #333;
 }
 
-.progress {
-    background-color: var(--progress-bg);
-    border-radius: 25px;
-    height: 20px;
-}
-
-.progress-bar {
-    background-color: var(--progress-bar-color);
-    line-height: 20px;
-    padding-right: 10px;
-    color: #fff;
-    border-radius: 25px 0 0 25px;
-    transition: width 2s ease-in-out;
-}
-
 /* Projetos */
 .section-projetos {
     background-color: #fff;
@@ -220,6 +221,7 @@ section {
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
+    color: #666;
 }
 
 /* Contato */
@@ -321,5 +323,9 @@ section {
 
     .social-links ul {
         flex-direction: column;
+    }
+
+    #contact-form button {
+        width: 100%;
     }
 }
