@@ -185,44 +185,6 @@ document.querySelectorAll('section, .fade-in, .slide-in-left, .slide-in-right').
     observer.observe(el);
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const subject = formData.get('subject');
-    const message = formData.get('message');
-    
-    // Simple form validation
-    if (!name || !email || !subject || !message) {
-        const alertMsg = currentLang === 'pt' ? 'Por favor, preencha todos os campos.' : 'Please fill in all fields.';
-        alert(alertMsg);
-        return;
-    }
-    
-    // Simulate form submission
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.innerHTML;
-    const loadingText = currentLang === 'pt' ? '<span>Enviando...</span>' : '<span>Sending...</span>';
-    
-    submitBtn.innerHTML = loadingText;
-    submitBtn.disabled = true;
-    
-    setTimeout(() => {
-        const successMsg = currentLang === 'pt' ? 
-            'Mensagem enviada com sucesso! Entrarei em contato em breve.' : 
-            'Message sent successfully! I will get in touch soon.';
-        alert(successMsg);
-        contactForm.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-    }, 2000);
-});
-
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
