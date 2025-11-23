@@ -13,7 +13,6 @@
     <script defer src="js\script.js"></script>
 </head>
 <body>
-    <!-- Navegação -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -49,7 +48,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -99,7 +97,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -142,7 +139,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -150,7 +146,38 @@
                 <h2 class="section-title" data-pt="Projetos em Destaque" data-en="Featured Projects">Projetos em Destaque</h2>
             </div>
             <div class="projects-grid">
+                
                 <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="imagens\Captura de tela 2025-11-23 022021.png" alt="Afrohunt Plataforma">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://afrohunt.com.br/" target="_blank" class="project-link">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web & Plataforma</div>
+                        <h3 class="project-title">Afrohunt</h3>
+                        <p class="project-description" data-pt="Reformulação completa do site, melhorando o design e implementando novas funcionalidades, como área de perfil e dashboard de talentos." data-en="Complete website redesign, improving design and implementing new features, such as talent profile and dashboard.">
+                            Reformulação completa do site, melhorando o design e implementando novas funcionalidades, como área de perfil e dashboard de talentos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JS (Ajax)</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
                     <div class="project-image">
                         <img src="imagens\Captura de tela 2025-07-30 120026.png?height=300&width=500" alt="Loja Virtual">
                         <div class="project-overlay">
@@ -160,7 +187,6 @@
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
                                 </a>
-                              
                             </div>
                         </div>
                     </div>
@@ -225,8 +251,8 @@
                         <div class="project-category" data-pt="Automação" data-en="Automation">Automação</div>
                         <h3 class="project-title" data-pt="Gerador de Relatórios PDF" data-en="PDF Report Generator">Projeto para Eventos</h3>
                         <p class="project-description" data-pt="Sistema automatizado para geração de relatórios em PDF com gráficos e dados dinâmicos." data-en="Automated system for generating PDF reports with charts and dynamic data.">
-                           Este é um sistema robusto de gerenciamento de eventos
-                         Desenvolvido com foco na arquitetura MVC e programação orientada a objetos(POO).
+                            Este é um sistema robusto de gerenciamento de eventos
+                            Desenvolvido com foco na arquitetura MVC e programação orientada a objetos(POO).
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Java</span>
@@ -239,7 +265,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <div class="section-header">
@@ -313,6 +338,12 @@
                         <div class="skills-grid">
                             <div class="skill-item">
                                 <div class="skill-icon">
+                                    <img src="https://cdn.simpleicons.org/n8n/FF6584" alt="n8n">
+                                </div>
+                                <span class="skill-name">n8n</span>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-icon">
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
                                 </div>
                                 <span class="skill-name">Git</span>
@@ -330,7 +361,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -381,99 +411,94 @@
                         </a>
                     </div>
                 </div>
-              <!-- Formulário de Contato -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-box">
-      <form class="contact-form" id="contactForm">
-        <div class="form-group">
-          <label for="name" data-pt="Nome" data-en="Name">Nome</label>
-          <input type="text" id="name" name="name" required>
+
+                <div class="contact-box">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-pt="Nome" data-en="Name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="from_email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" data-pt="Assunto" data-en="Subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" id="sendBtn">
+                            <span data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="from_email" required>
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Inicializar EmailJS
+      emailjs.init("HMUPxLghsLF_5veDW");
 
-        <div class="form-group">
-          <label for="subject" data-pt="Assunto" data-en="Subject">Assunto</label>
-          <input type="text" id="subject" name="subject" required>
-        </div>
+      const form = document.getElementById("contactForm");
+      const submitBtn = document.getElementById("sendBtn");
+      const labelSpan = submitBtn.querySelector("span");
+      const originalLabel = labelSpan.textContent;
 
-        <div class="form-group">
-          <label for="message" data-pt="Mensagem" data-en="Message">Mensagem</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-        <button type="submit" class="btn btn-primary" id="sendBtn">
-          <span data-pt="Enviar Mensagem" data-en="Send Message">Enviar Mensagem</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="2">
-            <line x1="22" y1="2" x2="11" y2="13"/>
-            <polygon points="22,2 15,22 11,13 2,9 22,2"/>
-          </svg>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("from_email");
+        const subject = formData.get("subject");
+        const message = formData.get("message");
 
-<!-- SDK do EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  // Inicializar EmailJS
-  emailjs.init("HMUPxLghsLF_5veDW");
+        if (!name || !email || !subject || !message) {
+          alert("Por favor, preencha todos os campos.");
+          return;
+        }
 
-  const form = document.getElementById("contactForm");
-  const submitBtn = document.getElementById("sendBtn");
-  const labelSpan = submitBtn.querySelector("span");
-  const originalLabel = labelSpan.textContent;
+        // Desabilita botão e muda texto
+        submitBtn.disabled = true;
+        labelSpan.textContent = "Enviando...";
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const name = formData.get("name");
-    const email = formData.get("from_email");
-    const subject = formData.get("subject");
-    const message = formData.get("message");
-
-    if (!name || !email || !subject || !message) {
-      alert("Por favor, preencha todos os campos.");
-      return;
-    }
-
-    // Desabilita botão e muda texto
-    submitBtn.disabled = true;
-    labelSpan.textContent = "Enviando...";
-
-    emailjs.send("service_zixxoi4", "template_r298zmr", {
-      name: name,
-      from_email: email,
-      subject: subject,
-      message: message,
-      time: new Date().toLocaleString("pt-BR")
-    })
-    .then(() => {
-      alert("Mensagem enviada com sucesso! Entrarei em contato em breve.");
-      form.reset();
-    })
-    .catch((err) => {
-      console.error("Erro no EmailJS:", err);
-      alert("Erro ao enviar mensagem. Tente novamente.");
-    })
-    .finally(() => {
-      submitBtn.disabled = false;
-      labelSpan.textContent = originalLabel;
+        emailjs.send("service_zixxoi4", "template_r298zmr", {
+          name: name,
+          from_email: email,
+          subject: subject,
+          message: message,
+          time: new Date().toLocaleString("pt-BR")
+        })
+        .then(() => {
+          alert("Mensagem enviada com sucesso! Entrarei em contato em breve.");
+          form.reset();
+        })
+        .catch((err) => {
+          console.error("Erro no EmailJS:", err);
+          alert("Erro ao enviar mensagem. Tente novamente.");
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          labelSpan.textContent = originalLabel;
+        });
+      });
     });
-  });
-});
-</script>
+    </script>
 
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
