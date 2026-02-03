@@ -867,7 +867,7 @@ body {
     border: 2px solid var(--border-color);
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
     font-family: inherit;
     background: var(--bg-primary);
     color: var(--text-primary);
@@ -877,6 +877,32 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Validation States */
+.form-group input.input-valid,
+.form-group textarea.input-valid {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-group input.input-error,
+.form-group textarea.input-error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-group input.input-valid:focus,
+.form-group textarea.input-valid:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.form-group input.input-error:focus,
+.form-group textarea.input-error:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
 }
 
 .form-group textarea {

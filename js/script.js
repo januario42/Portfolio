@@ -297,7 +297,128 @@ document.querySelectorAll('.skill-item').forEach(item => {
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Initialize EmailJS
+    initializeEmailJS();
 });
+
+// ===== EmailJS Configuration and Form Handling =====
+function initializeEmailJS() {
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("HMUPxLghsLF_5veDW");
+    }
+
+    const form = document.getElementById("contactForm");
+    if (!form) return;
+
+    const submitBtn = document.getElementById("sendBtn");
+    const labelSpan = submitBtn.querySelector("span");
+    const originalLabel = labelSpan.textContent;
+    const formInputs = form.querySelectorAll('input, textarea');
+
+    // Add validation visual feedback on input
+    formInputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validateField(this);
+        });
+
+        input.addEventListener('input', function() {
+            if (this.value.trim()) {
+                this.classList.remove('input-error');
+                this.classList.add('input-valid');
+            } else {
+                this.classList.remove('input-valid');
+            }
+        });
+    });
+
+    // Form submission
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Validate all fields
+        let isValid = true;
+        formInputs.forEach(input => {
+            if (!validateField(input)) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            alert("Por favor, preencha todos os campos corretamente.");
+            return;
+        }
+
+        const formData = new FormData(form);
+        const name = formData.get("name");
+        const email = formData.get("from_email");
+        const subject = formData.get("subject");
+        const message = formData.get("message");
+
+        // Disable button and change text
+        submitBtn.disabled = true;
+        labelSpan.textContent = "Enviando...";
+
+        if (typeof emailjs !== 'undefined') {
+            emailjs.send("service_zixxoi4", "template_r298zmr", {
+                name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                time: new Date().toLocaleString("pt-BR")
+            })
+            .then(() => {
+                alert("Mensagem enviada com sucesso! Entrarei em contato em breve.");
+                form.reset();
+                formInputs.forEach(input => {
+                    input.classList.remove('input-valid', 'input-error');
+                });
+            })
+            .catch((err) => {
+                console.error("Erro no EmailJS:", err);
+                alert("Erro ao enviar mensagem. Tente novamente.");
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                labelSpan.textContent = originalLabel;
+            });
+        } else {
+            console.error("EmailJS não está carregado");
+            alert("Erro ao enviar mensagem. Tente novamente.");
+            submitBtn.disabled = false;
+            labelSpan.textContent = originalLabel;
+        }
+    });
+}
+
+// Validate individual field
+function validateField(field) {
+    const value = field.value.trim();
+    const type = field.type;
+
+    if (!value) {
+        field.classList.add('input-error');
+        field.classList.remove('input-valid');
+        return false;
+    }
+
+    if (type === 'email' && !isValidEmail(value)) {
+        field.classList.add('input-error');
+        field.classList.remove('input-valid');
+        return false;
+    }
+
+    field.classList.remove('input-error');
+    field.classList.add('input-valid');
+    return true;
+}
+
+// Validate email format
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
 
 console.log('🚀 Portfólio carregado com sucesso!');
 console.log('🌙 Modo escuro disponível!');
